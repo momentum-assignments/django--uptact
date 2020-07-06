@@ -33,7 +33,7 @@ Note `(uptact-fsCrKkW6-py3.7)` at the end -- that's the virtualenv. If you need 
 
 If you get a `SECRET_KEY` error when you run your django server, you'll need to make sure Django can find that variable, which it is looking for in a `.env` file in the `uptact` project directory (see `django-environ` below). This repo provides a `.env.sample` so you can rename or copy that file so that is is named `.env`.
 ```
-$ cp uptact/.sample.env uptact/.env
+$ cp uptact/.env.sample uptact/.env
 ```
 
 ## First assignment
