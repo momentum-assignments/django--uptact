@@ -4,32 +4,32 @@ This is your first Django project. For this project, functionality has already b
 
 ## Getting this project set up
 
-You must have [Poetry](https://python-poetry.org/) installed. This will allow you to get all dependencies of this project installed on your computer. You should already have Poetry installed, but if not, run the following command:
+You must have [Pipenv](https://pipenv.pypa.io/en/latest/) installed. This will allow you to get all dependencies of this project installed on your computer. You should already have Pipenv installed, but if not, run the following command:
 
 ```
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+brew install pipenv
 ```
 
-Once you ensure you have Poetry installed, run the following command inside this project's directory:
+Once you ensure you have Pipenv installed, run the following command inside this project's directory:
 
 ```
-poetry install
+pipenv install
 ```
 
-Poetry uses a concept called a "virtualenv" in order to isolate the dependencies of this project from any other project. This requires you to run a command when you want to start working on this project. Before working on the project, run:
+Pipenv uses a concept called a "virtualenv" in order to isolate the dependencies of this project from any other project. This requires you to run a command when you want to start working on this project. Before working on the project, run:
 
 ```
-poetry shell
+pipenv shell
 ```
 
 This will change your terminal to use the virtualenv for this project. *You must run this command in any new terminal you open.* You will know if you are in the virtualenv because your prompt will change to show you. You should have the name of the virtualenv on your prompt, like the following:
 
 ```
-django--uptact is 📦 v0.1.0 via 🐍 v3.7.7 (uptact-fsCrKkW6-py3.7)
+django--uptact is 📦 v0.1.0 via 🐍 v3.7.7 (uptact)
 ❯
 ```
 
-Note `(uptact-fsCrKkW6-py3.7)` at the end -- that's the virtualenv. If you need to exit the virtualenv, simply close your terminal window or run `exit`.
+Note `(uptact)` at the end -- that's the virtualenv. If you need to exit the virtualenv, simply close your terminal window or run `exit`.
 
 If you get a `SECRET_KEY` error when you run your django server, you'll need to make sure Django can find that variable, which it is looking for in a `.env` file in the `uptact` project directory (see `django-environ` below). This repo provides a `.env.sample` so you can rename or copy that file so that is is named `.env`.
 ```
