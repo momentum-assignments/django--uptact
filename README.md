@@ -7,7 +7,7 @@ This is your first Django project. For this project, functionality has already b
 You must have [Pipenv](https://pipenv.pypa.io/en/latest/) installed. This will allow you to get all dependencies of this project installed on your computer. You should already have Pipenv installed, but if not, run the following command:
 
 ```
-brew install pipenv
+pip install --user pipenv
 ```
 
 Once you ensure you have Pipenv installed, run the following command inside this project's directory:
@@ -25,7 +25,7 @@ pipenv shell
 This will change your terminal to use the virtualenv for this project. _You must run this command in any new terminal you open._ You will know if you are in the virtualenv because your prompt will change to show you. You should have the name of the virtualenv on your prompt, like the following:
 
 ```
-django--uptact on  main via 🐍 v3.9.5 (django--uptact)
+django--uptact on  main via 🐍 v3.10.0 (django--uptact)
 ❯
 ```
 
@@ -38,6 +38,7 @@ If you get a `SECRET_KEY` error when you run your django server, you'll need to 
 ```
 $ cp uptact/.env.sample uptact/.env
 ```
+💫 Remember that `cp` is the shell command to copy files.
 
 ## First assignment
 
