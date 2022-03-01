@@ -4,10 +4,18 @@ This is your first Django project. For this project, functionality has already b
 
 ## Getting this project set up
 
-You must have [Pipenv](https://pipenv.pypa.io/en/latest/) installed. This will allow you to get all dependencies of this project installed on your computer. You should already have Pipenv installed, but if not, run the following command:
+You must have [Pipenv](https://pipenv.pypa.io/en/latest/) installed. This will allow you to get all dependencies of this project installed on your computer. You should already have Pipenv installed already.
 
+To check, run:
+
+```sh
+pipenv --version
 ```
-pip install --user pipenv
+
+If you get a "command not found" message, run the following:
+
+```sh
+pip install pipenv
 ```
 
 Once you ensure you have Pipenv installed, run the following command inside this project's directory:
@@ -33,14 +41,15 @@ Note what is in parens at the end -- that's the name of the virtualenv. It shows
 
 If you need to exit the virtualenv, simply close your terminal window or run `exit`.
 
-If you get a `SECRET_KEY` error when you run your django server, you'll need to make sure Django can find that variable, which it is looking for in a `.env` file in the `uptact` project directory (see `django-environ` below). This repo provides a `.env.sample` so you can rename or copy that file so that is is named `.env`.
+If you get a `SECRET_KEY` error when you run your django server, you'll need to make sure Django can find that variable, which it is looking for in a `.env` file in the `uptact` project directory (see `django-environ` below). You should create a `.env` file inside the `uptact` project directory. This repo provides a `.env.sample` that you can copy.
 
-```
+```sh
 $ cp uptact/.env.sample uptact/.env
 ```
 💫 Remember that `cp` is the shell command to copy files.
 
-## First assignment
+
+## Task 1
 
 For the first assignment, spend time familiarizing yourself with Django. Look at the `uptact` directory (the _project directory_) and the `contacts` directory (an _app directory_). Answer the following questions for yourself:
 
@@ -55,7 +64,7 @@ Then do the following steps:
 
 When you get through that, add a birthday to one of your contacts to test out your code.
 
-## Second assignment
+## Task 2
 
 With this assignment, we are going to explore relationships between models, and how URLs and views work.
 
@@ -71,7 +80,7 @@ Then do the following steps:
 3. Use the Django console to add a note to one of your contacts.
 4. Make a new view and template to see an individual contact. The URL for this view should be `contacts/<int:pk>/`. Show the notes for that contact on this individual view. Otherwise, this page can look like an individual contact on the contacts list page.
 
-## Third assignment
+## Task 3
 
 With this assignment, we are going to explore forms.
 
@@ -85,11 +94,15 @@ Test this by adding some notes to individual contacts.
 
 ## About this project
 
-This project was generated from the Momentum Django project template. This template sets up some minimal changes:
+This project makes some additions and modifications to the defaults in Django:
 
-- [django-extensions](https://django-extensions.readthedocs.io/en/latest/) and [django-debug-toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) are both installed and set up.
-- [django-environ](https://django-environ.readthedocs.io/en/latest/) is set up and the `DEBUG`, `SECRET_KEY`, and `DATABASES` settings are set by this package.
 - There is a custom user model defined in `users.models.User`.
 - There is a `templates/` and a `static/` directory at the top level, both of which are set up to be used.
 - A `.gitignore` file is provided.
 - [Pipenv](https://pipenv.pypa.io/en/latest/) is used to manage dependencies.
+
+It also adds the following dependencies:
+
+- [django-extensions](https://django-extensions.readthedocs.io/en/latest/) - adds some additional helpful django commands
+- [django-debug-toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) - gives us a debugging panel in the browser
+- [django-environ](https://django-environ.readthedocs.io/en/latest/) - lets us use a `.env` file to hide some of our settings. `DEBUG`, `SECRET_KEY`, and `DATABASES` settings are set by this package.
